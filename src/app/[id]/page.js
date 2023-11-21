@@ -9,7 +9,7 @@ const page = ({ params }) => {
     const [password, setPassword] = useState('');
 
     useEffect(() => {
-       axios.get(`http://localhost:8000/user/${params.id}`)
+       axios.get(`https://lazy-puce-narwhal-cuff.cyclic.app/user/${params.id}`)
             .then((data) => {
                 const userData = data?.data?.user
                 setUsername(userData?.username);
@@ -28,7 +28,7 @@ const page = ({ params }) => {
                 email: email,
                 password: password,
             }
-            const data = await axios.put(`http://localhost:8000/user/${params.id}`, userData);
+            const data = await axios.put(`https://lazy-puce-narwhal-cuff.cyclic.app/user/${params.id}`, userData);
             console.log(data);
             alert('user Edit successfully');
             router.push('/');

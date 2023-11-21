@@ -17,7 +17,7 @@ function UserForm() {
         email: email,
         password: password,
       }
-      const data = await axios.post('http://localhost:8000/user', userData);
+      const data = await axios.post('https://lazy-puce-narwhal-cuff.cyclic.app/user', userData);
       console.log(data);
       alert('user add successfully');
       router.push('/');

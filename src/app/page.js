@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 4
   async function deleFun(e) {
-    const response = await axios.delete(`http://localhost:8000/user/${e}`);
+    const response = await axios.delete(`https://lazy-puce-narwhal-cuff.cyclic.app/user${e}`);
     const user = UserCrush().then((data) => {
       setGetData(data?.user)
     })

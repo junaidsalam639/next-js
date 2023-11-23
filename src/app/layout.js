@@ -10,7 +10,7 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-  console.log(await getServerSideRendering());
+   await getServerSideRendering()
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>

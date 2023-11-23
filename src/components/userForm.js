@@ -68,11 +68,11 @@ function UserForm() {
               < div >
                 <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   {
-                    loading ? <div className='flex flex-row justify-center items-center'>
+                    loading ? <div className='flex flex-row justify-center items-center px-2'>
                       <Circles
                         height="20"
                         width="20"
-                        color="#4fa94d"
+                        color="#fff"
                         ariaLabel="circles-loading"
                         wrapperStyle={{}}
                         wrapperClass=""

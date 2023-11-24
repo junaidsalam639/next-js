@@ -5,8 +5,15 @@ import UserCrush from '@/lib/userCrush'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Circles } from 'react-loader-spinner';
+import { getServerSideRendering } from '@/lib/getServerSideRendering';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
+
+  getServerSideRendering().then((data) => {
+    console.log('data----->', data);
+  });
+
   const [getData, setGetData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,13 +38,9 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex justify-center items-center my-4'>
-        <Link href={'/userAdd'}>
-          <button className='bg-indigo-700 px-3 py-2 hover:bg-indigo-600 text-white'>Add User</button>
-        </Link>
-      </div>
+      <Navbar />
       {
-        loading ? <div className='flex flex-row justify-center items-center'>
+        loading ? <div className='flex flex-row h-96 justify-center items-center'>
           <Circles
             height="80"
             width="80"
